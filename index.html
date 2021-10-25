@@ -1,14 +1,84 @@
 <html>
-  <head>
-    <title>Material Responsive Example</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- import the Material stylesheet -->
-    <link rel="stylesheet" href="bundle.css">
-  </head>
-  <body class="mdc-typography">
-    <button id="show" class="mdc-typography">Open dialog</button>
-    <!-- import the Material javascript file -->
-    <script src="bundle.js" async></script>
-  </body>
+
+<head>
+  <title>Material Responsive Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- import the Material stylesheet -->
+  <link rel="stylesheet" href="bundle.css">
+</head>
+
+<body class="mdc-typography">
+  <button id="showDefault" class="button mdc-typography">Default</button>
+  <button id="showFixed" class="button mdc-typography">Fixed</button>
+  <button id="showWorkaround" class="button mdc-typography">Workaround</button>
+
+  <div class="mdc-dialog">
+    <div class="mdc-dialog__container">
+      <div class="mdc-dialog__surface">
+        <div class="mdc-dialog__content">
+          <h2 class="mdc-dialog__title">Select overflow demo dialog</h2>
+          <h1 class="mdc-typography--subtitle2">Select control</h1>
+          <div class="mdc-select mdc-select--outlined mdc-select--no-label" value="0">
+            <div class="mdc-select__anchor" role="button" aria-haspopup="listbox"
+              aria-required="false" tabindex="0" aria-disabled="false" aria-expanded="true">
+              <span class="mdc-select__selected-text-container">
+                <span class="mdc-select__selected-text">Diamond</span>
+              </span>
+              <span class="mdc-select__dropdown-icon">
+                <svg class="mdc-select__dropdown-icon-graphic" viewBox="7 10 10 5">
+                  <polygon class="mdc-select__dropdown-icon-inactive" stroke="none" fill-rule="evenodd" points="7 10 12 15 17 10"></polygon>
+                  <polygon class="mdc-select__dropdown-icon-active" stroke="none" fill-rule="evenodd" points="7 15 12 10 17 15"></polygon>
+                </svg>
+              </span>
+              <span class="mdc-notched-outline">
+                <span class="mdc-notched-outline__leading"></span>
+                <span class="mdc-notched-outline__notch"></span>
+                <span class="mdc-notched-outline__trailing"></span>
+              </span>
+            </div>
+            <div class="mdc-menu-surface mdc-menu-surface--fixed mdc-menu mdc-select__menu" role="listbox">
+              <ul class="mdc-deprecated-list" aria-orientation="vertical" role="menu" aria-hidden="true" tabindex="-1">
+                <a class="mdc-deprecated-list-item mdc-deprecated-list-item--selected" data-myitemid="0" role="button" tabindex="-1">
+                  <span class="mdc-deprecated-list-item__ripple"></span>
+                  <span class="mdc-deprecated-list-item__text">Diamond</span>
+                </a>
+                <a class="mdc-deprecated-list-item" data-myitemid="1" role="button" tabindex="-1">
+                  <span class="mdc-deprecated-list-item__ripple"></span>
+                  <span class="mdc-deprecated-list-item__text">Emerald</span>
+                  
+                </a>
+                <a class="mdc-deprecated-list-item" data-myitemid="2" role="button" tabindex="-1">
+                  <span class="mdc-deprecated-list-item__ripple"></span>
+                  <span class="mdc-deprecated-list-item__text">Ruby</span>
+                  
+                </a>
+                <a class="mdc-deprecated-list-item" data-myitemid="3" role="button" tabindex="-1">
+                  <span class="mdc-deprecated-list-item__ripple"></span>
+                  <span class="mdc-deprecated-list-item__text">Amethyst</span>
+                  
+                </a>
+                <a class="mdc-deprecated-list-item" data-myitemid="4" role="button" tabindex="-1">
+                  <span class="mdc-deprecated-list-item__ripple"></span>
+                  <span class="mdc-deprecated-list-item__text">Sapphire</span>
+                </a>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="mdc-dialog__actions">
+          <button type="button" class="mdc-button mdc-dialog__button" data-mdc-dialog-action="discard">
+            <div class="mdc-button__ripple"></div>
+            <span class="mdc-button__label">Close</span>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="mdc-dialog__scrim"></div>
+  </div>
+  <!-- import the Material javascript file -->
+  <script src="bundle.js" async></script>
+</body>
+
 </html>

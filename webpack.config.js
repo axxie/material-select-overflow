@@ -1,7 +1,11 @@
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+
 module.exports = [{
+  mode: 'development',
   entry: ['./app.scss', './app.js'],
   output: {
     filename: 'bundle.js',
+    publicPath: '/'
   },
   module: {
     rules: [
@@ -29,11 +33,22 @@ module.exports = [{
       {
         test: /\.js$/,
         loader: 'babel-loader',
-        query: {
+        options: {
           presets: ['es2015'],
           plugins: ['transform-object-assign']
         },
-      }
+      },
+      {
+        test: /\.html$/,
+        loader: "raw-loader"
+      }      
     ]
   },
+  plugins: [
+    new HtmlWebpackPlugin(
+      {
+        template: 'index.html'
+      }
+    )
+  ]
 }];
